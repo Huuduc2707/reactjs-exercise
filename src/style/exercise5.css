@@ -1,0 +1,41 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+input[type='text']{
+    margin: 3px auto;
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+input[type='submit']{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
