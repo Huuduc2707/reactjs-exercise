@@ -1,10 +1,11 @@
 body{
     background-color: darkgoldenrod;
+    display: flex;
+    justify-content: center;
 }
 
 p{
     position: absolute;
     top: 50%;
-    left: 45%;
     font-size: 30px;
 }
