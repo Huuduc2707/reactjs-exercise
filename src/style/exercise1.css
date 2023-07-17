@@ -1,0 +1,10 @@
+body{
+    background-color: darkgoldenrod;
+}
+
+p{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    font-size: 30px;
+}
