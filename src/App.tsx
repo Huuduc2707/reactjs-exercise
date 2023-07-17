@@ -1,4 +1,4 @@
-import Exercise3 from "./components/Exercise3";
+import Exercise4 from "./components/Exercise4";
 export default function App(): JSX.Element{
-    return <Exercise3 />;
+    return <Exercise4 />;
 }
