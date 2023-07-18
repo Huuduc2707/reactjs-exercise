@@ -1,0 +1,15 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#suggest-text{
+    text-align: center;
+    font-size: 15px;
+}
