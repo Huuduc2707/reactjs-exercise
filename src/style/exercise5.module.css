@@ -1,0 +1,38 @@
+.exercise5-container{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exercise5-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.exercise5-form input[type='text']{
+    margin: 3px auto;
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.exercise5-form input[type='submit']{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.exercise5-p{
+    color: blue;
+    font-size: 20px;
+    font-weight: 500;
+}
