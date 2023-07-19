@@ -1,4 +1,4 @@
-import '../style/exercise6.css';
+import styles from '../style/exercise6.module.css';
 interface Input{
     id?:string;
     setup:string;
@@ -10,7 +10,7 @@ let inputs: Array<Input> = [
 ]
 function Box({setup, punchline}: Input): JSX.Element{
     return (
-        <div>
+        <div className={styles['exercise6-box']}>
             <h4>{setup}</h4>
             <p>{punchline}</p>
         </div>
@@ -18,8 +18,8 @@ function Box({setup, punchline}: Input): JSX.Element{
 }
 export default function Exercise6(): JSX.Element{
     return (
-        <>
+        <div className={styles['exercise6-container']}>
             {inputs.map((input: Input):JSX.Element => <Box setup={input.setup} punchline={input.punchline}/>)}
-        </>
+        </div>
     );
 }

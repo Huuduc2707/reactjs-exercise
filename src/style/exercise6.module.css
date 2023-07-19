@@ -1,0 +1,32 @@
+.exercise6-container{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+}
+
+.exercise6-box{
+    height: 20%;
+    width: 18%;
+    margin: auto 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.exercise6-box h4{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.exercise6-box p{
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
