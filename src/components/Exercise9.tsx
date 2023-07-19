@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from '../style/exercise9.module.css';
 interface Item{
     avatar: string;
     first_name: string;
@@ -25,14 +26,14 @@ export default function Exercise9(): JSX.Element{
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div>
-            <button onClick={()=>setIsClick(!isClick)}>FETCH RANDOM</button>
-            <div className="card-list">
+        <div className={styles['exercise9-container']}>
+            <button onClick={()=>setIsClick(!isClick)} className={styles['exercise9-button']}>FETCH RANDOM</button>
+            <div className={styles['exercise9-card-list']}>
                 {data.map((item)=>
-                    <div className="card">
+                    <div className={styles['exercise9-card']}>
                         <img src={item.avatar} alt=""/>
-                        <p className="name">{`${item.first_name + " " + item.last_name}`}</p>
-                        <p className="title">{item.employment.title}</p>
+                        <p className={styles['exercise9-p-name']}>{`${item.first_name + " " + item.last_name}`}</p>
+                        <p className={styles['exercise9-p-title']}>{item.employment.title}</p>
                     </div>
                 )}
             </div>
