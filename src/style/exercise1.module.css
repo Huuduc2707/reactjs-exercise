@@ -1,0 +1,12 @@
+div.exercise1-container{
+    height: 90%;
+    background-color: darkgoldenrod;
+    display: flex;
+    justify-content: center;
+}
+
+p.exercise1-p{
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+}
