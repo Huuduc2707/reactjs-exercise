@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../style/exercise5.module.css';
+let nameRegex: RegExp = /^([a-zA-Z]+\s?)+$/;
 export default function Exercise5(): JSX.Element{
     const [result, setResult] = useState('');
     const [firstName, setFirstName] = useState('');
@@ -10,10 +11,19 @@ export default function Exercise5(): JSX.Element{
     function updateLastName(e: React.ChangeEvent<HTMLInputElement>): void{
         setLastName(e.target.value);
     }
-    function submitHandler(e: React.FormEvent): void{
+    async function submitHandler(e: React.FormEvent): Promise<void>{
         e.preventDefault();
-        if(!firstName || !lastName) setResult('Missing information!');
-        else setResult(`Hello, ${firstName} ${lastName}!`);
+        let formattedFirstName:string = await new Promise<string>((resolve)=>resolve(firstName.trim().replaceAll(/\s+/g, "")));
+        let formattedLastName:string = await new Promise<string>((resolve)=>resolve(lastName.trim().replaceAll(/\s+/g, "")));
+        if(!nameRegex.test(formattedFirstName)){
+            setResult('Invalid first name!');
+            return;
+        }
+        if(!nameRegex.test(formattedLastName)){
+            setResult('Invalid last name!');
+            return;
+        }
+        setResult(`Hello, ${formattedFirstName} ${formattedLastName}!`);
     }
     return(
         <div className={styles['exercise5-container']}>
