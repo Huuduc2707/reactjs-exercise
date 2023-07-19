@@ -1,19 +1,16 @@
-import '../style/exercise7.css';
+import React, { useState } from 'react';
+import styles from '../style/exercise7.module.css';
 let fruits: Array<string> = ["Banana", "Apple", "Orange", "Mango", "Pineapple", "Watermelon"];
 export default function Exercise7(): JSX.Element{
-    function suggest(text: string): void{
-        let suggestionList: HTMLElement|null = document.getElementById('suggest-text');
-        let suggestions: string = "";
-        fruits.forEach((fruit: string): void => {
-            if(text && fruit.toLowerCase().includes(text.toLowerCase())) suggestions += `${fruit}<br>`;
-        });
-        suggestionList!.innerHTML = suggestions;
+    const [suggestion, setSuggestion] = useState('');
+    function suggest(e: React.ChangeEvent<HTMLInputElement>): void{
+        e.target.value.replaceAll(/\s/g, "")?setSuggestion(fruits.filter((fruit)=>fruit.toLowerCase().includes(e.target.value.replaceAll(/\s/g, "").toLowerCase())).join("\n")):setSuggestion('');
     }
     return (
-        <div>
-            <p>Search: </p>
-            <input type="search" onChange={():void=>suggest(document.getElementsByTagName('input')[0].value)}/>
-            <p id="suggest-text"></p>
+        <div className={styles['exercise7-container']}>
+            <p className={styles['exercise7-p']}>Search: </p>
+            <input type="search" onChange={(e)=>suggest(e)} className={styles['exercise7-input']}/>
+            <p id={styles['suggest-text']} className={styles['exercise7-p']}>{suggestion}</p>
         </div>
     );
 }
