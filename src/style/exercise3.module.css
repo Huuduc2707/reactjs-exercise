@@ -1,0 +1,31 @@
+.exercise3-container{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise3-p{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.exercise3-checkbox{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.exercise3-ul{
+    list-style-type: none;
+}
+
+.exercise3-ul li{
+    font-size: 30px;
+}
+
+#display-list{
+    color: red;
+}
