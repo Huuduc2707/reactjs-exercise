@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../style/exercise5.module.css';
-let nameRegex: RegExp = /^([a-zA-Z]+\s?)+$/;
+let nameRegex: RegExp = /^([a-zA-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]+\s?)+$/;
 export default function Exercise5(): JSX.Element{
     const [result, setResult] = useState('');
     const [firstName, setFirstName] = useState('');
